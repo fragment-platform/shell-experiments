@@ -33,4 +33,4 @@ sed -i "" "1s/.*/untrusted comment: TODO: insert blog URL here (oh my god the sl
 # TODO: this breaks badly if a proper path is given and not just folder name
 cd $post_folder
 zip -r $wd/$post_folder.post *
-
+# I'm thinking .post files should just store all the data right at the root - will need to see some other .zip formats to commit to this for sure. otherwise there's a complication with having to figure out what the root folder name is supposed to be and such.
