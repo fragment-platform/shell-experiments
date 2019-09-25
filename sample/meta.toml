@@ -1,0 +1,14 @@
+title = "A Sample Post for the .post Format"
+description = "This is a relatively short description that describes the post or perhaps has a couple of the post's opening lines."
+author = "Hack Codeman"
+language = "en" # ISO 639-1, same as html
+
+date-published = 2019-09-20T12:00:00Z
+date-modified = 2019-09-23T18:20:00Z
+
+content-type = "post" # in the future can add support for audio, video, etc.
+
+blog = "https://example.com/blog/" # canonical root path of blog
+post-id = "2019-09-24-sample-post" # post identifier, only requirement is that it's unique - this is enforced by the file system
+
+tags = ["example", "test", "something"]
