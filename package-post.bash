@@ -19,7 +19,13 @@ cd $post_folder
 # TODO: find * might not work with hidden files
 # TODO: sha256sum is not portable - check for OS?
 rm -f SHA256.sig # may or may not exist but we wouldn't want to generate its checksum
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
 find * -type f -print0 | xargs -0 sha256sum | awk '{print "SHA256 ("$2") = "$1}' > SHA256
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+find * -type f -print0 | xargs -0 shasum -a 256 | awk '{print "SHA256 ("$2") = "$1}' > SHA256
+fi
+
 cd $wd
 
 
